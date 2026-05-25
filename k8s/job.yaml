@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: mini-commerce-pipeline
+spec:
+  backoffLimit: 2
+  template:
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: app
+          image: mini-event-log-pipeline:latest
+          imagePullPolicy: IfNotPresent
+          command: ["python", "-m", "app.main"]
+          envFrom:
+            - configMapRef:
+                name: mini-commerce-pipeline-config
+          env:
+            - name: DB_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mini-commerce-pipeline-secret
+                  key: DB_PASSWORD

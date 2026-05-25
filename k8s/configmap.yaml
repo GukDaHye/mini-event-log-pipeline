@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mini-commerce-pipeline-config
+data:
+  DB_HOST: commerce-postgres
+  DB_PORT: "5432"
+  DB_NAME: commerce_events
+  DB_USER: commerce_user
+  OUTPUT_DIR: output
+  EVENT_COUNT: "1000"
