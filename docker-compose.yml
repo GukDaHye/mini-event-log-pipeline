@@ -24,6 +24,7 @@ services:
       DB_PASSWORD: commerce_password
       OUTPUT_DIR: output
       EVENT_COUNT: 1000
+    command: python -m app.main
     depends_on:
       db:
         condition: service_healthy

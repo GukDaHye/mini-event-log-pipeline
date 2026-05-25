@@ -37,6 +37,8 @@ docker compose up --build
 | `top_products_revenue.png` | 매출 기여 상품 Top10 |
 | `funnel.png` | 조회→장바구니→구매 전환 |
 
+![funnel](output/funnel.png)
+
 ## Test
 
 ```bash

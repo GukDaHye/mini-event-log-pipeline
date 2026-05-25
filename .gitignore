@@ -5,3 +5,8 @@ __pycache__/
 .idea/
 .DS_Store
 db.sqlite3
+
+# Django leftovers (unrelated project files)
+manage.py
+evnets/
+mini_event_log_pipeline/
